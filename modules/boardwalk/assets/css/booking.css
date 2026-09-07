@@ -1,0 +1,143 @@
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-new { background: var(--accent-soft); color: var(--accent); }
+.status-confirmed { background: rgba(0, 200, 80, 0.15); color: #00c850; }
+.status-cancelled { background: rgba(255, 75, 75, 0.15); color: var(--error); }
+
+/* ==========================================================================
+   СТИЛИ СТРАНИЦЫ СОЗДАНИЯ ЗАЯВКИ
+   ========================================================================== */
+
+.container.section {
+    padding-top: 40px;
+}
+
+/* 1. Стили таблицы расписания (сверху) */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0d1117;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.schedule-table th {
+    background: #1c2128;
+    color: var(--muted);
+    text-align: left;
+    padding: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-white) !important;
+    font-size: 14px;
+}
+
+/* 2. Контейнер формы */
+.form.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: var(--radius);
+    margin-top: 30px;
+}
+
+/* 3. Сетка формы (ряды) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* По две колонки в ряд */
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+/* На мобилках делаем в одну колонку */
+@media (max-width: 768px) {
+    .form-row { grid-template-columns: 1fr; gap: 15px; }
+}
+
+/* 4. Стили подписей и полей */
+label {
+    color: var(--text-white) !important;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-control, select, input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    background-color: #0d1117 !important;
+    border: 1px solid var(--border) !important;
+    color: #fff !important;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Стили для readonly полей (данные профиля) */
+input[readonly] {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--muted) !important;
+    cursor: not-allowed;
+}
+
+/* 5. Радио-кнопки (Статус игрока) */
+.radio {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.radio label {
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio input[type="radio"] {
+    accent-color: var(--accent); /* Золотой цвет кружочка */
+    width: 18px;
+    height: 18px;
+}
+
+/* 6. Чекбокс согласия */
+.checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--muted) !important;
+}
+
+/* 7. Кнопка отправки */
+.btn-primary {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    background: var(--accent) !important;
+    color: #000 !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,303 @@
+/* Hero-блок */
+
+.tour-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0 2.5rem;
+}
+
+.tour-hero__content h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.tour-hero__content p {
+    max-width: 480px;
+    color: #cbd5f5;
+    margin-bottom: 1.25rem;
+}
+
+.tour-hero__media {
+    position: relative;
+    height: 260px;
+}
+
+.tour-hero__photo {
+    position: absolute;
+    inset: 0;
+    border-radius: 1.25rem;
+    background-image: linear-gradient(
+            to bottom right,
+            rgba(56,189,248,0.4),
+            rgba(22,163,74,0.5)
+        ),
+        url('/images/tours/slide4.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 24px 40px rgba(15,23,42,0.8);
+    transform: translateY(0);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.tour-hero__photo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 52px rgba(15,23,42,0.95);
+}
+
+/* Блок "О портале" */
+
+.tour-about {
+    margin: 1.5rem 0 2rem;
+}
+
+.tour-about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tour-about__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 1.75rem;
+}
+
+.tour-about ul {
+    padding-left: 1.1rem;
+    margin: 0.75rem 0 0;
+    color: #cbd5f5;
+}
+
+.tour-about li {
+    margin-bottom: 0.25rem;
+}
+
+.tour-about__media {
+    position: relative;
+    height: 200px;
+}
+
+.tour-about__photo {
+    position: absolute;
+    width: 55%;
+    height: 70%;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 18px 30px rgba(15,23,42,0.9);
+    opacity: 0.92;
+}
+
+.tour-about__photo--1 {
+    top: 0;
+    left: 0;
+    background-image: url('/images/tours/slide1.jpg');
+}
+
+.tour-about__photo--2 {
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/tours/slide2.jpg');
+}
+
+/* Превью каталога */
+
+.tour-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2rem 0 1rem;
+}
+
+.tour-section-header h2 {
+    font-size: 1.4rem;
+}
+
+.tour-link {
+    font-size: 0.9rem;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.tour-link:hover {
+    text-decoration: underline;
+}
+
+.tour-card {
+    background: radial-gradient(circle at top left, #1f2937, #020617);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(148,163,184,0.3);
+    box-shadow: 0 18px 28px rgba(15,23,42,0.9);
+    transform: translateY(0);
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 40px rgba(15,23,42,0.95);
+    border-color: rgba(56,189,248,0.7);
+}
+
+.tour-card a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.tour-card__image {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tour-card__body {
+    padding: 0.9rem 1rem 1rem;
+}
+
+.tour-card__body h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.tour-card__body p {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    margin-bottom: 0.6rem;
+}
+
+.tour-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.tour-card__price {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+/* Услуги */
+
+.tour-services {
+    margin: 2.25rem 0 1.75rem;
+}
+
+.tour-services h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.tour-services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.tour-service-card {
+    padding: 1rem;
+    border-radius: 0.9rem;
+    background: #020617;
+    border: 1px solid rgba(148,163,184,0.3);
+    transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.tour-service-card h3 {
+    margin-bottom: 0.35rem;
+}
+
+.tour-service-card p {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+.tour-service-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+/* Отзывы */
+
+.tour-reviews {
+    margin: 2rem 0;
+}
+
+.tour-reviews h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.tour-review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.tour-review-card {
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    background: #020617;
+    border: 1px solid rgba(148,163,184,0.3);
+    font-size: 0.9rem;
+}
+
+.tour-review-card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+}
+
+.tour-review-card__rating {
+    color: #facc15;
+    font-size: 0.85rem;
+}
+
+.tour-review-card time {
+    display: block;
+    margin-top: 0.35rem;
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+/* Контакты */
+
+.tour-contacts {
+    margin: 2rem 0 0.5rem;
+}
+
+.tour-contacts__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 1.25rem;
+}
+
+.tour-contacts a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.tour-contacts a:hover {
+    text-decoration: underline;
+}
+
+/* Мобилка */
+
+@media (max-width: 768px) {
+    .tour-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-about__grid,
+    .tour-contacts__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-hero__media {
+        order: -1;
+        height: 220px;
+    }
+}

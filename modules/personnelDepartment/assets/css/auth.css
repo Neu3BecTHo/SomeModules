@@ -1,0 +1,191 @@
+/* Общий контейнер для страниц регистрации/входа */
+
+.hr-auth {
+    max-width: 480px;
+    margin: 32px auto 24px;
+    padding: 0 16px;
+}
+
+.hr-auth__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.hr-auth__subtitle {
+    margin: 0 0 18px;
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* Карточка формы */
+
+.hr-auth__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 20px 18px;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    border: 1px solid #e5e7eb;
+}
+
+/* Форма */
+
+.hr-form {
+    margin: 0;
+}
+
+.hr-form__field {
+    margin-bottom: 14px;
+}
+
+.hr-form__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.hr-form__input {
+    width: 100%;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 0 11px;
+    font-size: 14px;
+    color: #111827;
+    background-color: #f9fafb;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    outline: none;
+}
+
+.hr-form__input::placeholder {
+    color: #9ca3af;
+}
+
+.hr-form__input:focus {
+    border-color: #111827;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #1118271a, 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+/* Пара полей в ряд (пароль / повтор) */
+
+.hr-form__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hr-form__row .hr-form__field {
+    flex: 1 1 0;
+}
+
+/* Ошибки */
+
+.hr-form__error {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #b91c1c;
+}
+
+/* Чекбокс согласия */
+
+.hr-form__checkbox-row {
+    margin: 10px 0 14px;
+}
+
+.hr-form__checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.hr-form__checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.hr-form__checkbox-label {
+    font-size: 13px;
+    color: #4b5563;
+}
+
+/* Кнопки */
+
+.hr-form__actions {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.hr-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    padding: 9px 18px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.hr-btn_primary {
+    background: #111827;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+}
+
+.hr-btn_primary:hover {
+    background: #020617;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.35);
+}
+
+/* Переключатель «уже зарегистрированы / ещё не зарегистрированы» */
+
+.hr-auth__switch {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6b7280;
+    text-align: center;
+}
+
+.hr-auth__switch a {
+    color: #111827;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.hr-auth__switch a:hover {
+    color: #020617;
+    border-color: #111827;
+}
+
+/* Адаптив */
+
+@media (max-width: 480px) {
+    .hr-auth {
+        margin-top: 24px;
+    }
+
+    .hr-auth__card {
+        padding: 18px 14px 16px;
+        border-radius: 14px;
+    }
+
+    .hr-form__row {
+        flex-direction: column;
+    }
+}

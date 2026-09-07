@@ -1,0 +1,188 @@
+/* Контейнер страницы анкеты */
+
+.q-page {
+    max-width: 900px;
+    margin: 32px auto 24px;
+    padding: 0 16px;
+}
+
+.q-page__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 6px;
+    text-align: left;
+}
+
+.q-page__subtitle {
+    margin: 0 0 18px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Карточка анкеты */
+
+.q-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 22px 18px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    border: 1px solid #e5e7eb;
+}
+
+/* Блоки формы */
+
+.q-form {
+    margin: 0;
+}
+
+.q-form__section {
+    margin-bottom: 18px;
+}
+
+.q-form__section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Поля */
+
+.q-form__field {
+    margin-bottom: 12px;
+}
+
+.q-form__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.q-form__input,
+.q-form__textarea,
+.q-form__select {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 0 11px;
+    font-size: 14px;
+    color: #111827;
+    background-color: #f9fafb;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    outline: none;
+}
+
+.q-form__input {
+    height: 38px;
+}
+
+.q-form__textarea {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-height: 80px;
+    resize: vertical;
+}
+
+.q-form__select {
+    height: 38px;
+}
+
+.q-form__input::placeholder,
+.q-form__textarea::placeholder {
+    color: #9ca3af;
+}
+
+.q-form__input:focus,
+.q-form__textarea:focus,
+.q-form__select:focus {
+    border-color: #111827;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #1118271a, 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+/* Readonly-поля (ФИО, телефон, email) */
+
+.q-form__input--readonly {
+    background-color: #f3f4f6;
+    border-style: dashed;
+    border-color: #d1d5db;
+    cursor: default;
+}
+
+/* Строка из двух полей */
+
+.q-form__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.q-form__row .q-form__field {
+    flex: 1 1 0;
+}
+
+/* Файлы */
+
+.q-form__file-input {
+    padding: 6px 10px;
+    background-color: #f9fafb;
+}
+
+/* Ошибки */
+
+.q-form__error {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #b91c1c;
+}
+
+/* Кнопка */
+
+.q-form__actions {
+    margin-top: 10px;
+}
+
+.q-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    padding: 9px 18px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.q-btn_primary {
+    background: #111827;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+}
+
+.q-btn_primary:hover {
+    background: #020617;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.35);
+}
+
+/* Адаптив */
+
+@media (max-width: 768px) {
+    .q-card {
+        padding: 18px 16px 16px;
+        border-radius: 14px;
+    }
+
+    .q-form__row {
+        flex-direction: column;
+    }
+}

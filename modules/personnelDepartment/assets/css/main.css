@@ -1,0 +1,142 @@
+.hr-landing {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    padding: 40px 16px;
+}
+
+.hr-landing__panel {
+    background: #ffffff;
+    max-width: 720px;
+    width: 100%;
+    padding: 32px 32px 28px;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.hr-landing__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.hr-logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #111827;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hr-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.hr-landing__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 10px;
+}
+
+.hr-landing__subtitle {
+    margin: 0 0 24px;
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.hr-landing__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.hr-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    border: 1px solid transparent;
+}
+
+.hr-btn_primary {
+    background: #111827;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+}
+
+.hr-btn_primary:hover {
+    background: #020617;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.35);
+}
+
+.hr-btn_ghost {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+.hr-btn_ghost:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.hr-landing__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 6px;
+}
+
+.hr-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #9ca3af;
+}
+
+@media (max-width: 600px) {
+    .hr-landing__panel {
+        padding: 24px 20px 22px;
+        border-radius: 14px;
+    }
+
+    .hr-landing__title {
+        font-size: 22px;
+    }
+
+    .hr-landing__subtitle {
+        font-size: 14px;
+    }
+
+    .hr-btn {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}

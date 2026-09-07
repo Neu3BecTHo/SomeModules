@@ -1,0 +1,273 @@
+/* Заголовок страницы каталога / тура */
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* ===================== Фильтр каталога ===================== */
+
+.tour-filter {
+    margin-bottom: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    background: #020617;
+    border: 1px solid rgba(148,163,184,0.4);
+}
+
+.tour-filter__form {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    align-items: end;
+}
+
+.tour-filter__form .form-group {
+    margin-bottom: 0;
+}
+
+.tour-filter__form label {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.tour-filter__form input,
+.tour-filter__form select {
+    background: #020617;
+    border-radius: 0.45rem;
+    border: 1px solid rgba(148,163,184,0.6);
+    color: #e5e7eb;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.9rem;
+}
+
+.tour-filter__form input:focus,
+.tour-filter__form select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 1px rgba(56,189,248,0.6);
+}
+
+.tour-filter__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* адаптив фильтра */
+
+@media (max-width: 900px) {
+    .tour-filter__form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .tour-filter__form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================== Сетка каталога ===================== */
+
+.catalog-grid {
+    margin-top: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+/* карточки в каталоге используют общий стиль .tour-card,
+   тут при необходимости только перезаписываем детали */
+
+.catalog-grid .tour-card {
+    background: radial-gradient(circle at top left, #1f2937, #020617);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(148,163,184,0.35);
+    box-shadow: 0 18px 28px rgba(15,23,42,0.9);
+    transform: translateY(0);
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.catalog-grid .tour-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 40px rgba(15,23,42,0.95);
+    border-color: rgba(56,189,248,0.7);
+}
+
+.catalog-grid .tour-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.catalog-grid .tour-card__image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.catalog-grid .tour-card__body {
+    padding: 0.9rem 1rem 1rem;
+}
+
+.catalog-grid .tour-card__body h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+    color: #e5e7eb;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.catalog-grid .tour-card__body p {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    margin-bottom: 0.6rem;
+}
+
+.catalog-grid .tour-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.catalog-grid .tour-card__price {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.catalog-grid .tour-card__duration {
+    color: #9ca3af;
+}
+
+/* ===================== Страница тура ===================== */
+
+.tour-detail {
+    margin-bottom: 2rem;
+}
+
+/* шапка тура */
+
+.tour-detail__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.tour-detail__image {
+    border-radius: 1.25rem;
+    min-height: 220px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 22px 40px rgba(15,23,42,0.95);
+}
+
+.tour-detail__summary h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.tour-detail__short {
+    color: #cbd5f5;
+    margin-bottom: 0.75rem;
+}
+
+.tour-detail__meta {
+    margin-bottom: 0.9rem;
+    font-size: 0.95rem;
+}
+
+.tour-detail__meta .label {
+    color: #9ca3af;
+    margin-right: 0.35rem;
+}
+
+.tour-detail__meta .value {
+    font-weight: 600;
+    color: #4ade80;
+}
+
+/* описание / программа */
+
+.tour-detail__program {
+    margin-bottom: 1.75rem;
+}
+
+.tour-detail__program h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.tour-detail__text {
+    white-space: pre-line;
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+/* ===================== Отзывы на странице тура ===================== */
+
+.tour-detail__reviews {
+    margin-top: 1.5rem;
+}
+
+.tour-detail__reviews h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.tour-review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.tour-review-card {
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    background: #020617;
+    border: 1px solid rgba(148,163,184,0.35);
+    font-size: 0.9rem;
+}
+
+.tour-review-card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+}
+
+.tour-review-card__rating {
+    color: #facc15;
+    font-size: 0.85rem;
+}
+
+.tour-review-card p {
+    margin-bottom: 0.4rem;
+}
+
+.tour-review-card time {
+    display: block;
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+.tour-detail__add-review-hint {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* адаптив страницы тура */
+
+@media (max-width: 900px) {
+    .tour-detail__header {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-detail__image {
+        min-height: 200px;
+    }
+}

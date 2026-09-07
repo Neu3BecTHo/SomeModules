@@ -1,0 +1,139 @@
+.q-card--cabinet {
+    padding: 20px 22px 20px;
+}
+
+.q-cabinet {
+    display: flex;
+    gap: 20px;
+}
+
+.q-cabinet__side {
+    width: 240px;
+    border-right: 1px solid #e5e7eb;
+    padding-right: 20px;
+}
+
+.q-cabinet__content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.q-cabinet__avatar {
+    margin-bottom: 10px;
+}
+
+.q-cabinet__avatar-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #111827;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.q-cabinet__name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.q-cabinet__role {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.q-cabinet__contacts {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.q-cabinet__contact {
+    margin-bottom: 6px;
+}
+
+.q-cabinet__contact-label {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.q-cabinet__contact-value {
+    font-size: 13px;
+    color: #111827;
+}
+
+.q-cabinet__edit {
+    margin-top: 6px;
+    width: 100%;
+}
+
+.q-cabinet__block {
+    padding-top: 4px;
+}
+
+.q-cabinet__list {
+    margin: 4px 0 0;
+}
+
+.q-cabinet__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    padding: 3px 0;
+}
+
+.q-cabinet__row dt {
+    color: #6b7280;
+}
+
+.q-cabinet__row dd {
+    margin: 0;
+    color: #111827;
+}
+
+.q-cabinet__row--full {
+    flex-direction: column;
+}
+
+.q-cabinet__file {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.q-cabinet__file a {
+    color: #111827;
+    text-decoration: none;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 1px;
+}
+
+.q-cabinet__file a:hover {
+    border-color: #111827;
+}
+
+@media (max-width: 768px) {
+    .q-cabinet {
+        flex-direction: column;
+    }
+
+    .q-cabinet__side {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding-right: 0;
+        padding-bottom: 14px;
+        margin-bottom: 10px;
+    }
+
+    .q-cabinet__content {
+        grid-template-columns: 1fr;
+    }
+}

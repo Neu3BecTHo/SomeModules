@@ -1,0 +1,65 @@
+/* Фотостудия "Мои истории" - Стили для авторизации */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #F9F7F4 0%, #E8E2D9 100%);
+}
+
+.auth-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-title {
+    text-align: center;
+    color: #8B7355;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.auth-form .form-control {
+    border-radius: 10px;
+    border: 2px solid #E8E2D9;
+    padding: 12px 15px;
+}
+
+.auth-form .form-control:focus {
+    border-color: #8B7355;
+    box-shadow: 0 0 0 0.2rem rgba(139, 115, 85, 0.25);
+}
+
+.auth-btn {
+    background-color: #8B7355;
+    border-color: #8B7355;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 30px;
+    width: 100%;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #6B5344;
+    border-color: #6B5344;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-links a {
+    color: #8B7355;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}

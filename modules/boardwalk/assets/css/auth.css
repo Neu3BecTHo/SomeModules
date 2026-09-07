@@ -1,0 +1,112 @@
+/* Центрирование карточки формы на странице */
+.site-signup, .site-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px); /* Вычитаем высоту хедера и футера */
+}
+
+/* Ограничение ширины формы */
+.form.card {
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+/* Заголовки */
+.site-signup h1, .site-login h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Стили полей ActiveForm */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.control-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Инпуты */
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* Ошибки валидации Yii2 */
+.has-error .form-control {
+    border-color: var(--error);
+}
+
+.has-error .control-label {
+    color: var(--error);
+}
+
+.help-block {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--error);
+    line-height: 1.4;
+}
+
+/* Чекбоксы (согласие, запомнить меня) */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+    margin-top: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+/* Кнопка во всю ширину */
+.form-group .btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Ссылка под формой */
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+    .form.card {
+        padding: 20px;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+}

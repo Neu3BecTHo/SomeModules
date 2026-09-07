@@ -1,0 +1,272 @@
+.ap-body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.ap-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.ap-header {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: #020617;
+    border-bottom: 1px solid #111827;
+}
+
+.ap-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.ap-brand__mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #f97316;
+    color: #020617;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ap-brand__text {
+    color: #f9fafb;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ap-header__user {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-right: 10px;
+}
+
+.ap-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.ap-btn_header {
+    background: #f9fafb;
+    color: #020617;
+}
+
+.ap-btn_header:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+/* Main layout */
+
+.ap-main {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+}
+
+/* Sidebar */
+
+.ap-sidebar {
+    width: 220px;
+    background: #020617;
+    border-right: 1px solid #111827;
+    padding: 16px 12px;
+}
+
+.ap-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ap-menu__item {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.ap-menu__item:hover {
+    background: #111827;
+    color: #f9fafb;
+}
+
+.ap-menu__item--active {
+    background: #f97316;
+    color: #020617;
+}
+
+/* Content */
+
+.ap-content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+    background: radial-gradient(circle at top left, #1f2937 0, #020617 55%);
+}
+
+.ap-content__card {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #0b1120;
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    border: 1px solid #1e293b;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+
+.ap-footer {
+    height: 40px;
+    border-top: 1px solid #111827;
+    font-size: 12px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #020617;
+}
+
+.ap-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #4b5563;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .ap-main {
+        flex-direction: column;
+    }
+
+    .ap-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #111827;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ap-content {
+        padding: 14px;
+    }
+
+    .ap-content__card {
+        padding: 14px 12px;
+        border-radius: 14px;
+    }
+}
+
+.ap-filters {
+    margin-bottom: 14px;
+}
+
+.ap-filters__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.ap-filters__field {
+    flex: 1 1 190px;
+    min-width: 180px;
+}
+
+.ap-filters__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #9ca3af;
+}
+
+/* Общий стиль инпутов/селектов в админке */
+
+.ap-filters__control {
+    width: 100%;
+    height: 34px;
+    border-radius: 999px;
+    border: 1px solid #1f2937;
+    padding: 0 12px;
+    font-size: 13px;
+    color: #e5e7eb;
+    background-color: #020617;
+    box-shadow: 0 0 0 1px rgba(15,23,42,0.5);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    appearance: none;
+}
+
+.ap-filters__control::placeholder {
+    color: #6b7280;
+}
+
+.ap-filters__control:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 1px #f97316, 0 10px 25px rgba(15,23,42,0.7);
+    background-color: #020617;
+}
+
+/* Блок кнопок */
+
+.ap-filters__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ap-filters__reset {
+    font-size: 13px;
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.ap-filters__reset:hover {
+    color: #e5e7eb;
+}
+
+/* Мобилка */
+
+@media (max-width: 768px) {
+    .ap-filters__grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ap-filters__actions {
+        justify-content: flex-start;
+    }
+}

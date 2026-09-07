@@ -1,0 +1,265 @@
+/* ========= Базовый каркас админки ========= */
+
+body {
+    min-height: 100vh;
+}
+
+body.tour-body {
+    background: #0b1120;
+    color: #e5e7eb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* заголовок страницы */
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* контейнер для таблиц и форм */
+
+.tour-admin-box {
+    background: #020617;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border: 1px solid rgba(148,163,184,0.4);
+    box-shadow: 0 18px 32px rgba(15,23,42,0.9);
+    margin-bottom: 1.5rem;
+}
+
+/* ========= Таблицы (GridView) ========= */
+
+.tour-admin-box table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tour-admin-box thead {
+    background: #020617;
+}
+
+.tour-admin-box th,
+.tour-admin-box td {
+    padding: 0.55rem 0.65rem;
+    border-bottom: 1px solid rgba(51,65,85,0.85);
+    vertical-align: middle;
+}
+
+.tour-admin-box th {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+}
+
+.tour-admin-box tr:nth-child(even) td {
+    background: rgba(15,23,42,0.7);
+}
+
+.tour-admin-box tr:hover td {
+    background: rgba(15,23,42,0.95);
+}
+
+/* фильтры в GridView */
+
+.tour-admin-box .filters input,
+.tour-admin-box .filters select {
+    background: #020617;
+    border-radius: 0.45rem;
+    border: 1px solid rgba(148,163,184,0.6);
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.45rem;
+}
+
+.tour-admin-box .filters input:focus,
+.tour-admin-box .filters select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 1px rgba(56,189,248,0.6);
+}
+
+/* ========= Статусы заявок ========= */
+
+.tour-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tour-status--new {
+    background: rgba(59,130,246,0.12);
+    color: #60a5fa;
+}
+
+.tour-status--review {
+    background: rgba(234,179,8,0.12);
+    color: #facc15;
+}
+
+.tour-status--accepted {
+    background: rgba(34,197,94,0.12);
+    color: #4ade80;
+}
+
+/* ========= Кнопки в таблицах (смена статуса, CRUD) ========= */
+
+.tour-admin-box .btn-xs,
+.tour-review-btn,
+.tour-admin-box a[href*="update"],
+.tour-admin-box a[href*="delete"] {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.7);
+    color: #e5e7eb;
+    text-decoration: none;
+    background: transparent;
+}
+
+.tour-admin-box .btn-xs:hover,
+.tour-review-btn:hover,
+.tour-admin-box a[href*="update"]:hover,
+.tour-admin-box a[href*="delete"]:hover {
+    border-color: #38bdf8;
+    color: #e5e7eb;
+}
+
+/* ========= Формы в админке ========= */
+
+.tour-admin-box .form-group {
+    margin-bottom: 0.75rem;
+}
+
+.tour-admin-box label {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.tour-admin-box input[type="text"],
+.tour-admin-box input[type="number"],
+.tour-admin-box input[type="email"],
+.tour-admin-box textarea,
+.tour-admin-box select {
+    background: #020617;
+    border-radius: 0.45rem;
+    border: 1px solid rgba(148,163,184,0.6);
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.55rem;
+}
+
+.tour-admin-box input:focus,
+.tour-admin-box textarea:focus,
+.tour-admin-box select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 1px rgba(56,189,248,0.55);
+}
+
+/* ========= Пагинация ========= */
+
+.tour-admin-box .pagination li a,
+.tour-admin-box .pagination li span {
+    background: #020617;
+    border-color: rgba(148,163,184,0.5);
+    color: #e5e7eb;
+}
+
+.tour-admin-box .pagination li.active span {
+    background: #38bdf8;
+    border-color: #38bdf8;
+    color: #0f172a;
+}
+
+/* ========= Шапка админки (admin layout) ========= */
+
+.tour-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(15,23,42,0.96);
+    border-bottom: 1px solid rgba(148,163,184,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.tour-header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.tour-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tour-logo__mark {
+    font-size: 1.4rem;
+}
+
+.tour-nav a {
+    margin: 0 0.5rem;
+    color: #cbd5f5;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.tour-nav a:hover {
+    color: #38bdf8;
+}
+
+.tour-header__auth .btn {
+    margin-left: 0.5rem;
+}
+
+/* ========= Основная область и футер ========= */
+
+.tour-main {
+    max-width: 1200px;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1.5rem;
+}
+
+.tour-footer {
+    border-top: 1px solid rgba(148,163,184,0.3);
+    background: #020617;
+    padding: 0.9rem 1.5rem 1.2rem;
+    margin-top: 2rem;
+}
+
+.tour-footer__bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* ========= Мобилка ========= */
+
+@media (max-width: 768px) {
+    .tour-header__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .tour-main {
+        padding: 0 1rem;
+    }
+}

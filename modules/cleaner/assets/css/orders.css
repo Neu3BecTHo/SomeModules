@@ -1,0 +1,118 @@
+.orders-page {
+    padding-top: 8px;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.orders-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+}
+
+.order-card__row {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.order-card__label {
+    color: #78909c;
+}
+
+.order-card__status {
+    font-weight: 600;
+}
+
+.order-status--Новая {
+    color: #0277bd;
+}
+
+.order-status--Подтверждена {
+    color: #2e7d32;
+}
+
+.order-status--В\ работе {
+    color: #f9a825;
+}
+
+.order-status--Отменена {
+    color: #c62828;
+}
+
+.order-status--Завершена {
+    color: #2e7d32;
+}
+
+.order-card__meta {
+    font-size: 12px;
+    color: #90a4ae;
+    margin-top: 6px;
+}
+
+@media (max-width: 576px) {
+    .orders-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+.order-form-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.order-form-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.order-form-subtitle {
+    font-size: 14px;
+    color: #607d8b;
+    margin-bottom: 20px;
+}
+
+.order-form-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 18px;
+    border: 1px solid #e0e0e0;
+}
+
+.order-form-group-title {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.order-form-extra {
+    margin-top: 10px;
+}
+
+.order-form-extra textarea {
+    min-height: 80px;
+}
+
+.hidden-field {
+    display: none;
+}
