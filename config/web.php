@@ -83,7 +83,7 @@ $config = [
                     throw new \yii\base\InvalidConfigException('COOKIE_VALIDATION_KEY environment variable is required');
                 }
                 return $key;
-            }(),
+            },
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -492,4 +492,7 @@ if (YII_ENV_DEV) {
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
-        'class' => '                                                                                         
+        'class' => 'yii\gii\Module',
+        'allowedIPs' => ['127.0.0.1', '::1'],
+    ];
+}
